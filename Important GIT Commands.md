@@ -1,0 +1,27 @@
+# github-colaboration-tutorial
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR
+#Important commands to remember:#
+q // interrupts current command
+git init // makes local git repository 
+git branch feature-1 //create new branch feature-1
+git checkout feature-1 //changes working branch to feature-1
+git branch -a // shows all branches in local repository
+git checkout -b feature-1 //creates new branch and changes working branch to it
+git branch -d feature-1 // deletes branch feature-1
+git add . //stage all files in current branch
+git commit -m "Message on commit"//commit changes to local branch repository
+git log --oneline //show all commits and with their id's and messages
+
+git checkout 23a2228 // reverts all files in current branch to commit with id 23a2228 but only as read-only
+git revert 23a2228 // reverts all files in current branch to commit with id 23a2228 as a NEW commit
+git reset 23a2228// is dangerous and should be avoided, resets all files in current branch to commit with id 23a2228 and deletes all commits further in time
+
+git merge feature-1// merges current(commonly master) branch  with branch feature-1 branch,if any conflict should occur, editor will ask user to decide which changes to keep and ///////git which to discard
+git remote add origin "https://github.com/VladimirJecic/github-colaboration-tutorial.git" //creates alias for link from where/to you will usually fetch/pull/ your code
+git remote -v //shows current alias for fetch and push commands
+
+git fetch origin feature-1 // fetches reference to changes on remote repository
+git merge FETCH_HEAD // merges local repository with changes referenced in FETCH_HEAD
+git pull origin feature-1 //shorthand for two commands listed above 
+git push origin feature-1 // pushes changes to branch feature-1, creates branch with that name if it doesn't exist already
+git clone //clones remote repository to local repository
