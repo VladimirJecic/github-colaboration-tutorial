@@ -9,6 +9,7 @@ git branch -a // shows all branches in local repository
 git checkout -b feature-1 //creates new branch and changes working branch to it
 git branch -d feature-1 // deletes branch feature-1
 git add . //stage all files in current branch
+git status //see staged,modified and uncommited files
 git commit -m "Message on commit"//commit changes to local branch repository
 git log --oneline //show all commits and with their id's and messages
 
