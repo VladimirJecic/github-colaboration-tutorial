@@ -2,13 +2,18 @@
 https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR
 #Important commands to remember:#
 q // interrupts current command
+# github-colaboration-tutorial
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR
+#Important commands to remember:#
+q // interrupts current command
 git init // makes local git repository 
 git branch feature-1 //create new branch feature-1
 git checkout feature-1 //changes working branch to feature-1
 git branch -a // shows all branches in local repository
 git checkout -b feature-1 //creates new branch and changes working branch to it
-git branch -d feature-1 // deletes branch feature-1
+git branch -d feature-1 // deletes branch feature-1 localy
 git add . //stage all files in current branch
+git status //see staged,modified and uncommited files
 git commit -m "Message on commit"//commit changes to local branch repository
 git log --oneline //show all commits and with their id's and messages
 
@@ -25,3 +30,10 @@ git fetch origin feature-1 // fetches reference to changes on remote repository
 git merge FETCH_HEAD // merges local repository with changes referenced in FETCH_HEAD
 git pull origin feature-1 //shorthand for two commands listed above 
 git push origin feature-1 // pushes changes to branch feature-1, creates branch with that name if it doesn't exist already
+
+--more commands
+git branch -m old-name new-name //rename local branch
+git diff fffceec index.php //see changes in index.php comparing file now and in commit with id fffceec 
+git branch -r //see all existing branches
+git push origin -d feature-1/ deletes branch feature-1 *remotely*
+git remote prune origin //will remove stale branches(tracking lefrovers of already deleted branches as output of git branch -a)
